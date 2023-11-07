@@ -1,13 +1,30 @@
-html {
-    background-color: #262626;
-    color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-img {
+body {
+    background-color: #f5f5f5;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
     width: 100%;
-    height: 100%;
-    max-width: 300px;
+    min-height: 75px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+  
+#header-img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,43 +32,249 @@ img {
     margin-left: 20px;
 }
 
+.spacer {
+    margin-bottom: 80px;
+    color: transparent;
+}
+
 #nav-bar {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    height: 250px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 #nav-bar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#nav-bar li {
     list-style-type: none;
+    padding: 20px;
 }
 
 #nav-bar a:link {
-    color: #ffffff;
+    color: #cf2b6b;
     text-decoration: none;
+    padding: 20px;
+    offset: 80px;
 }
 
 #nav-bar a:hover {
-    color: #dddddd;
+    background-color: #f5f5f5;
+    transition: background-color 0.25s;
+    padding: 20px;
 }
 
 #nav-bar a:active, a:visited {
-    color: #ffffff;
+    color: #cf2b6b;
 }
 
-@media only screen and (max-width: 815px) {
+#main-doc {
+    position: relative;
+    margin-top: 80px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#starter {
+    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+}
+
+#starter h2 {
+    font-weight: 600;
+    font-size: 23px;
+}
+
+#subscribe {
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+#subscribe form {
+    margin-top: 10px;
+}
+
+#subscribe input {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+}
+
+#subscribe input[type='email'] {
+    max-width: 275px;
+    width: 100%;
+    padding: 5px;
+    border: 2px solid black;
+}
+  
+#subscribe input[type='submit'] {
+    width: 170px;
+    margin: 10px 0;
+    background-color: white;
+    height: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px black solid;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#subscribe input[type='submit']:hover {
+    background-color: #cf2b6b;
+    color: white;
+    transition: background-color 0.25s;
+    transition: color 0.25s;
+}
+
+#features {
+    margin-bottom: 50px;
+}
+
+.features-sect {
+    display: flex;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+#features .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    width: 150px;
+    width: 20vw;
+    color: #cf2b6b;
+}
+  
+@media (max-width: 550px) {
+    #features .icon {
+      display: none;
+    }
+}
+  
+#features .desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    height: 125px;
+    width: 80vw;
+    padding: 5px;
+}
+
+#features iframe {
+    margin: 50px 0;
+}
+
+#reviews {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.review-container {
+    margin: 0 1rem;
+    max-width: 300px;
+    flex: 1;
+    
+}
+  
+.review-body {
+    background-color: rgb(238, 238, 238);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#reviews .user-logo {
+    height: 80px;
+    width: 80px;
+    color: #cf2b6b;
+    margin: 0 auto;
+}
+
+.user-name {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.user-location {
+    color: black;
+}
+
+.user-rating {
+    color: rgb(253, 180, 42);
+    margin: 10px 0;
+}
+
+.user-review {
+    max-width: 280px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    color: rgb(150, 150, 150);
+}
+  
+@media (max-width: 550px) {
+    #features .desc {
+      width: 100%;
+      text-align: center;
+      padding: 0;
+      height: 150px;
+    }
+}
+
+@media (max-width: 650px) {
+    header {
+        flex-wrap: wrap;
+    }
+    
+    #header-img {
+        margin: 0 auto;
+        margin-top: 15px;
+        position: relative;
+    }
+
     #nav-bar {
-        position: fixed; 
-        top: 0;
+        margin-top: 10px;
         width: 100%;
-        max-height: 275px;
-        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px;
+    }
+
+    #nav-bar ul {
+        flex-direction: column;
+    }
+    
+    #nav-bar li {
+        padding: 5px;
+    }
+
+    #nav-bar a:link {
+        color: black;
+        text-decoration: none;
+        padding: 5px;
+    }
+    
+    #nav-bar a:hover {
+        background-color: #f5f5f5;
+        padding: 5px 15px;
     }
 
     #main-doc {
-        position: relative;
-        margin-top: 200px;
-        margin-left: 15px;
+        margin-top: 185px;
     }
 }
