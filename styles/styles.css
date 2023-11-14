@@ -11,6 +11,13 @@ body {
     font-size: 16px;
 }
 
+h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -181,16 +188,65 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .review-container {
     margin: 0 1rem;
     max-width: 300px;
     flex: 1;
-    
 }
   
 .review-body {
+    background-color: rgb(238, 238, 238);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#reviews .user-logo {
+    height: 80px;
+    width: 80px;
+    color: #cf2b6b;
+    margin: 0 auto;
+}
+
+.user-name {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.user-location {
+    color: black;
+}
+
+.user-rating {
+    color: rgb(253, 180, 42);
+    margin: 10px 0;
+}
+
+.user-review {
+    max-width: 280px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    color: rgb(150, 150, 150);
+}
+
+#products {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.product-container {
+    margin: 0 1rem;
+    max-width: 300px;
+    flex: 1;
+    
+}
+  
+.product-body {
     background-color: rgb(238, 238, 238);
     padding: 2.5rem;
     border-radius: 12px;
